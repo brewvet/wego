@@ -6,9 +6,9 @@ import (
 	"math"
 	"time"
 
-	colorable "github.com/mattn/go-colorable"
-	runewidth "github.com/mattn/go-runewidth"
-	"github.com/schachmat/wego/iface"
+	colorable "github.com/brewvet/go-colorable"
+	runewidth "github.com/brewvet/go-runewidth"
+	"github.com/brewvet/wego/iface"
 )
 
 type emojiConfig struct {
