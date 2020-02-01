@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/brewvet/go-colorable"
-	"github.com/brewvet/go-runewidth"
+	"github.com/mattn/go-colorable"
+	"github.com/mattn/go-runewidth"
 	"github.com/brewvet/wego/iface"
 )
 
