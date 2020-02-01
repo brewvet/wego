@@ -214,7 +214,7 @@ func (c *forecastConfig) fetchToday(location string) ([]iface.Cond, error) {
 }
 
 func (c *forecastConfig) Setup() {
-	flag.StringVar(&c.apiKey, "forecast-api-key", "35b6f0bae1948a068b22c86bf03c0c09", "forecast backend: the api `KEY` to use")
+	flag.StringVar(&c.apiKey, "forecast-api-key", "", "forecast backend: the api `KEY` to use")
 	flag.StringVar(&c.lang, "forecast-lang", "en", "forecast backend: the `LANGUAGE` to request from forecast.io")
 	flag.BoolVar(&c.debug, "forecast-debug", false, "forecast backend: print raw requests and responses")
 }
