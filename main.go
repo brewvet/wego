@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/schachmat/ingo"
-	_ "github.com/schachmat/wego/backends"
-	_ "github.com/schachmat/wego/frontends"
-	"github.com/schachmat/wego/iface"
+	"github.com/brewvet/ingo"
+	_ "github.com/brewvet/wego/backends"
+	_ "github.com/brewvet/wego/frontends"
+	"github.com/brewvet/wego/iface"
 )
 
 func pluginLists() {
@@ -42,12 +42,12 @@ func main() {
 	}
 
 	// initialize global flags and default config
-	location := flag.String("location", "40.748,-73.985", "`LOCATION` to be queried")
-	flag.StringVar(location, "l", "40.748,-73.985", "`LOCATION` to be queried (shorthand)")
+	location := flag.String("location", "30.315,-89.334", "`LOCATION` to be queried")
+	flag.StringVar(location, "l", "30.315,-89.334", "`LOCATION` to be queried (shorthand)")
 	numdays := flag.Int("days", 3, "`NUMBER` of days of weather forecast to be displayed")
 	flag.IntVar(numdays, "d", 3, "`NUMBER` of days of weather forecast to be displayed (shorthand)")
-	unitSystem := flag.String("units", "metric", "`UNITSYSTEM` to use for output.\n    \tChoices are: metric, imperial, si, metric-ms")
-	flag.StringVar(unitSystem, "u", "metric", "`UNITSYSTEM` to use for output. (shorthand)\n    \tChoices are: metric, imperial, si, metric-ms")
+	unitSystem := flag.String("units", "imperial", "`UNITSYSTEM` to use for output.\n    \tChoices are: metric, imperial, si, metric-ms")
+	flag.StringVar(unitSystem, "u", "imperial", "`UNITSYSTEM` to use for output. (shorthand)\n    \tChoices are: metric, imperial, si, metric-ms")
 	selectedBackend := flag.String("backend", "forecast.io", "`BACKEND` to be used")
 	flag.StringVar(selectedBackend, "b", "forecast.io", "`BACKEND` to be used (shorthand)")
 	selectedFrontend := flag.String("frontend", "ascii-art-table", "`FRONTEND` to be used")
